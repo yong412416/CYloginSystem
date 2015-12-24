@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCACE5D21C0981560040ACF3 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCACE5D11C0981560040ACF3 /* ForgetViewController.m */; };
+		BCC0526D1C2ACC40004DF76B /* CYGameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC0526C1C2ACC40004DF76B /* CYGameOverViewController.m */; };
+		BCD401C11C087468003883E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD401C01C087468003883E8 /* main.m */; };
+		BCD401C41C087468003883E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD401C31C087468003883E8 /* AppDelegate.m */; };
+		BCD401C71C087468003883E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD401C61C087468003883E8 /* ViewController.m */; };
+		BCD401CA1C087468003883E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD401C81C087468003883E8 /* Main.storyboard */; };
+		BCD401CC1C087468003883E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD401CB1C087468003883E8 /* Images.xcassets */; };
+		BCD401CF1C087468003883E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD401CD1C087468003883E8 /* LaunchScreen.xib */; };
+		BCD401DB1C087468003883E8 /* CYloginSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD401DA1C087468003883E8 /* CYloginSystemTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCD401D51C087468003883E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD401B31C087467003883E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD401BA1C087467003883E8;
+			remoteInfo = CYloginSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCACE5D01C0981560040ACF3 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
+		BCACE5D11C0981560040ACF3 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
+		BCC0526B1C2ACC40004DF76B /* CYGameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGameOverViewController.h; sourceTree = "<group>"; };
+		BCC0526C1C2ACC40004DF76B /* CYGameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGameOverViewController.m; sourceTree = "<group>"; };
+		BCD401BB1C087467003883E8 /* CYloginSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYloginSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD401BF1C087468003883E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD401C01C087468003883E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCD401C21C087468003883E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCD401C31C087468003883E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCD401C51C087468003883E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BCD401C61C087468003883E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCD401C91C087468003883E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCD401CB1C087468003883E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BCD401CE1C087468003883E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BCD401D41C087468003883E8 /* CYloginSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYloginSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD401D91C087468003883E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD401DA1C087468003883E8 /* CYloginSystemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYloginSystemTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCD401B81C087467003883E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD401D11C087468003883E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCD401B21C087467003883E8 = {
+			isa = PBXGroup;
+			children = (
+				BCD401BD1C087467003883E8 /* CYloginSystem */,
+				BCD401D71C087468003883E8 /* CYloginSystemTests */,
+				BCD401BC1C087467003883E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCD401BC1C087467003883E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCD401BB1C087467003883E8 /* CYloginSystem.app */,
+				BCD401D41C087468003883E8 /* CYloginSystemTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCD401BD1C087467003883E8 /* CYloginSystem */ = {
+			isa = PBXGroup;
+			children = (
+				BCD401C21C087468003883E8 /* AppDelegate.h */,
+				BCD401C31C087468003883E8 /* AppDelegate.m */,
+				BCD401C51C087468003883E8 /* ViewController.h */,
+				BCD401C61C087468003883E8 /* ViewController.m */,
+				BCACE5D01C0981560040ACF3 /* ForgetViewController.h */,
+				BCACE5D11C0981560040ACF3 /* ForgetViewController.m */,
+				BCC0526B1C2ACC40004DF76B /* CYGameOverViewController.h */,
+				BCC0526C1C2ACC40004DF76B /* CYGameOverViewController.m */,
+				BCD401C81C087468003883E8 /* Main.storyboard */,
+				BCD401CB1C087468003883E8 /* Images.xcassets */,
+				BCD401CD1C087468003883E8 /* LaunchScreen.xib */,
+				BCD401BE1C087468003883E8 /* Supporting Files */,
+			);
+			path = CYloginSystem;
+			sourceTree = "<group>";
+		};
+		BCD401BE1C087468003883E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCD401BF1C087468003883E8 /* Info.plist */,
+				BCD401C01C087468003883E8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCD401D71C087468003883E8 /* CYloginSystemTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCD401DA1C087468003883E8 /* CYloginSystemTests.m */,
+				BCD401D81C087468003883E8 /* Supporting Files */,
+			);
+			path = CYloginSystemTests;
+			sourceTree = "<group>";
+		};
+		BCD401D81C087468003883E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCD401D91C087468003883E8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCD401BA1C087467003883E8 /* CYloginSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD401DE1C087468003883E8 /* Build configuration list for PBXNativeTarget "CYloginSystem" */;
+			buildPhases = (
+				BCD401B71C087467003883E8 /* Sources */,
+				BCD401B81C087467003883E8 /* Frameworks */,
+				BCD401B91C087467003883E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CYloginSystem;
+			productName = CYloginSystem;
+			productReference = BCD401BB1C087467003883E8 /* CYloginSystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCD401D31C087468003883E8 /* CYloginSystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD401E11C087468003883E8 /* Build configuration list for PBXNativeTarget "CYloginSystemTests" */;
+			buildPhases = (
+				BCD401D01C087468003883E8 /* Sources */,
+				BCD401D11C087468003883E8 /* Frameworks */,
+				BCD401D21C087468003883E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCD401D61C087468003883E8 /* PBXTargetDependency */,
+			);
+			name = CYloginSystemTests;
+			productName = CYloginSystemTests;
+			productReference = BCD401D41C087468003883E8 /* CYloginSystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCD401B31C087467003883E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = qianfeng;
+				TargetAttributes = {
+					BCD401BA1C087467003883E8 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					BCD401D31C087468003883E8 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = BCD401BA1C087467003883E8;
+					};
+				};
+			};
+			buildConfigurationList = BCD401B61C087467003883E8 /* Build configuration list for PBXProject "CYloginSystem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCD401B21C087467003883E8;
+			productRefGroup = BCD401BC1C087467003883E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCD401BA1C087467003883E8 /* CYloginSystem */,
+				BCD401D31C087468003883E8 /* CYloginSystemTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCD401B91C087467003883E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD401CA1C087468003883E8 /* Main.storyboard in Resources */,
+				BCD401CF1C087468003883E8 /* LaunchScreen.xib in Resources */,
+				BCD401CC1C087468003883E8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD401D21C087468003883E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCD401B71C087467003883E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCACE5D21C0981560040ACF3 /* ForgetViewController.m in Sources */,
+				BCD401C71C087468003883E8 /* ViewController.m in Sources */,
+				BCD401C41C087468003883E8 /* AppDelegate.m in Sources */,
+				BCC0526D1C2ACC40004DF76B /* CYGameOverViewController.m in Sources */,
+				BCD401C11C087468003883E8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD401D01C087468003883E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD401DB1C087468003883E8 /* CYloginSystemTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCD401D61C087468003883E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCD401BA1C087467003883E8 /* CYloginSystem */;
+			targetProxy = BCD401D51C087468003883E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCD401C81C087468003883E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCD401C91C087468003883E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCD401CD1C087468003883E8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCD401CE1C087468003883E8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCD401DC1C087468003883E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCD401DD1C087468003883E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCD401DF1C087468003883E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CYloginSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCD401E01C087468003883E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CYloginSystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BCD401E21C087468003883E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CYloginSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CYloginSystem.app/CYloginSystem";
+			};
+			name = Debug;
+		};
+		BCD401E31C087468003883E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CYloginSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CYloginSystem.app/CYloginSystem";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCD401B61C087467003883E8 /* Build configuration list for PBXProject "CYloginSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD401DC1C087468003883E8 /* Debug */,
+				BCD401DD1C087468003883E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD401DE1C087468003883E8 /* Build configuration list for PBXNativeTarget "CYloginSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD401DF1C087468003883E8 /* Debug */,
+				BCD401E01C087468003883E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD401E11C087468003883E8 /* Build configuration list for PBXNativeTarget "CYloginSystemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD401E21C087468003883E8 /* Debug */,
+				BCD401E31C087468003883E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCD401B31C087467003883E8 /* Project object */;
+}
