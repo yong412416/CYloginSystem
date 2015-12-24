@@ -51,7 +51,8 @@
 
     [buttonSutra addTarget:self action:@selector(forget) forControlEvents:UIControlEventTouchUpInside];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [buttonViolent addTarget:self action:@selector(violenceGame) forControlEvents:(UIControlEventTouchUpInside)];
+    [buttonArcade addTarget:self action:@selector(arcadeGame) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonArcade];
     [self.view addSubview:buttonSutra];
     [self.view addSubview:buttonViolent];
@@ -62,9 +63,31 @@
     forget.time = 30;
     forget.side = 2;
     forget.tag = NO;
-    forget.clarity = 0.5;
+    forget.clarity = 0.6;
     forget.gameTitle = buttonSutra.titleLabel.text;
     [self.navigationController pushViewController:forget animated:YES];
 }
+
+- (void)violenceGame{
+    ForgetViewController *forget = [[ForgetViewController alloc]init];
+    forget.time = 30;
+    forget.side = 6;
+    forget.tag = NO;
+    forget.clarity = 0.4;
+    forget.gameTitle = buttonViolent.titleLabel.text;
+    [self.navigationController pushViewController:forget animated:YES];
+
+}
+
+- (void)arcadeGame{
+    ForgetViewController *forget = [[ForgetViewController alloc]init];
+    forget.time = 30;
+    forget.side = 2;
+    forget.tag = YES;
+    forget.clarity = 0.4;
+    forget.gameTitle = buttonArcade.titleLabel.text;
+    [self.navigationController pushViewController:forget animated:YES];
+}
+
 
 @end

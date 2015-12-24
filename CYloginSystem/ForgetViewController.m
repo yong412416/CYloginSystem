@@ -8,6 +8,8 @@
 
 #import "ForgetViewController.h"
 #import "CYGameOverViewController.h"
+#import "ViewController.h"
+#import "AppDelegate.h"
 @interface ForgetViewController ()
 {
     UIButton *imageButton;
@@ -37,18 +39,34 @@
     [self creatTimer];
     p = self.side;
     [super viewDidLoad];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(backMain)];
+    
     NSInteger width = (self.view.bounds.size.width)/4;
     NSInteger height = self.view.bounds.size.height;
     self.timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(width*1.25-30, height-50, width+120, 50)];
     
     self.timeLabel.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor purpleColor];
-    [self.view addSubview:self.timeLabel];
+    if (!self.tag) {
+        [self.view addSubview:self.timeLabel];        
+    }
     
     // Do any additional setup after loading the view.
     [self playGame];
    
 //    [self gameOver];
+}
+
+- (void)backMain{
+    AppDelegate *appd = [UIApplication sharedApplication].delegate;
+    ViewController *vc = [[ViewController alloc]init];
+    UINavigationController *nav= [[UINavigationController alloc]initWithRootViewController:vc];
+    appd.window.rootViewController = nav;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 
@@ -64,6 +82,7 @@
     NSInteger height=(self.view.bounds.size.height)/p;
     NSInteger width=(self.view.bounds.size.width)/p;
     UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, height*p-100)];
+//    v.backgroundColor = [UIColor blackColor];
     v.tag = 987;
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -78,12 +97,15 @@
     for (int i = 0; i < p*p; i++) {
         imageButton = [[UIButton alloc]initWithFrame:CGRectMake(width*(i/p+0.025), ((height*0.83) *(i%p)), width*0.95, height*0.8)];
         if (i == s ) {
-            imageButton.backgroundColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:(self.clarity+0.01*a)];
+            imageButton.backgroundColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:(0.8+self.clarity*a*0.01)];
             [imageButton addTarget:self action:@selector(playGame) forControlEvents:UIControlEventTouchDown];
         }else{ 
             imageButton.backgroundColor = [ UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
             if (self.tag) {
-                [imageButton addTarget:self action:@selector(hange) forControlEvents:UIControlEventTouchDown];
+                [imageButton addTarget:self action:@selector(gameOver) forControlEvents:UIControlEventTouchDown];
+                if (a>20) {
+                    [self gameOver];
+                }
             }
         }
         [v addSubview:imageButton];
@@ -101,9 +123,13 @@
     _s = self.time;
 }
 - (void)timerAction{
+    
         if (++_s>=self.time) {
             _s=0;
-            [self gameOver];
+            if (!self.tag) {
+                [self gameOver];
+            }
+            
         }
     self.timeLabel.text=[NSString stringWithFormat:@"剩余时间%02zd",self.time-_s];
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
