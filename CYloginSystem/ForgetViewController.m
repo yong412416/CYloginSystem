@@ -52,7 +52,7 @@
 }
 
 
-
+// 开始游戏
 - (void)playGame{
     // 1. 先将原来的v移除
     UIView *view = [self.view viewWithTag:987];
