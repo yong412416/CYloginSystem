@@ -79,10 +79,10 @@
     if (a %5 == 0) {
         p ++;
     }
-    NSInteger height=(self.view.bounds.size.height)/p;
-    NSInteger width=(self.view.bounds.size.width)/p;
-    UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, height*p-100)];
-//    v.backgroundColor = [UIColor blackColor];
+     CGFloat height=[UIScreen mainScreen].bounds.size.height/p;
+    CGFloat width=(self.view.bounds.size.width)/p;
+    UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, height*p*0.8)];
+    v.backgroundColor = [UIColor blackColor];
     v.tag = 987;
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -95,7 +95,7 @@
     CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;
     for (int i = 0; i < p*p; i++) {
-        imageButton = [[UIButton alloc]initWithFrame:CGRectMake(width*(i/p+0.025), ((height*0.83) *(i%p)), width*0.95, height*0.8)];
+        imageButton = [[UIButton alloc]initWithFrame:CGRectMake((0.1*p/(p-1)+0.9)*width*(i%p), ((height*0.8) *(i/p)*(0.1*p/(p-1)+0.9)), width*0.9, height*0.72)];
         if (i == s ) {
             imageButton.backgroundColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:(0.8+self.clarity*a*0.01)];
             [imageButton addTarget:self action:@selector(playGame) forControlEvents:UIControlEventTouchDown];
