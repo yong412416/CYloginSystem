@@ -82,7 +82,7 @@
      CGFloat height=[UIScreen mainScreen].bounds.size.height/p;
     CGFloat width=(self.view.bounds.size.width)/p;
     UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, height*p*0.8)];
-    v.backgroundColor = [UIColor blackColor];
+//    v.backgroundColor = [UIColor blackColor];
     v.tag = 987;
     
     self.view.backgroundColor = [UIColor whiteColor];
