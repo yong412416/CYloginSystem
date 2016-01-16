@@ -10,6 +10,9 @@
 
 
 #import "ForgetViewController.h"
+/** 屏幕的宽高 */
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 @interface ViewController ()
 {
@@ -31,9 +34,9 @@
     
     CGFloat w = [UIScreen mainScreen].bounds.size.width;
     
-    buttonSutra = [[UIButton alloc]initWithFrame:CGRectMake(w/2-90, 100, 180, 80)];
-    buttonArcade = [[UIButton alloc] initWithFrame:CGRectMake(w/2-90, 180, 180, 80)];
-    buttonViolent = [[UIButton alloc] initWithFrame:CGRectMake(w/2-90, 260, 180, 80)];
+    buttonSutra = [[UIButton alloc]initWithFrame:CGRectMake(w/2-90, SCREEN_HEIGHT*0.2, 180, 80)];
+    buttonArcade = [[UIButton alloc] initWithFrame:CGRectMake(w/2-90, SCREEN_HEIGHT*0.4, 180, 80)];
+    buttonViolent = [[UIButton alloc] initWithFrame:CGRectMake(w/2-90, SCREEN_HEIGHT*0.6, 180, 80)];
     
     [buttonSutra setTitle:@"经典模式" forState:UIControlStateNormal];
     [buttonArcade setTitle:@"街机模式" forState:UIControlStateNormal];
@@ -43,9 +46,9 @@
     buttonArcade.titleLabel.font = [UIFont systemFontOfSize:42];
     buttonViolent.titleLabel.font = [UIFont systemFontOfSize:42];
     
-    [buttonSutra setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [buttonArcade setTitleColor:[UIColor blueColor]forState:UIControlStateNormal];
-    [buttonViolent setTitleColor:[UIColor blueColor]forState:UIControlStateNormal];
+    [buttonSutra setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [buttonArcade setTitleColor:[UIColor purpleColor]forState:UIControlStateNormal];
+    [buttonViolent setTitleColor:[UIColor redColor]forState:UIControlStateNormal];
 //    [button2 setBackgroundColor:[UIColor purpleColor]];
     
 
@@ -53,6 +56,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [buttonViolent addTarget:self action:@selector(violenceGame) forControlEvents:(UIControlEventTouchUpInside)];
     [buttonArcade addTarget:self action:@selector(arcadeGame) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"game"]];
     [self.view addSubview:buttonArcade];
     [self.view addSubview:buttonSutra];
     [self.view addSubview:buttonViolent];
@@ -81,7 +86,7 @@
 
 - (void)arcadeGame{
     ForgetViewController *forget = [[ForgetViewController alloc]init];
-    forget.time = 30;
+    forget.time = 90;
     forget.side = 2;
     forget.tag = YES;
     forget.clarity = 0.4;

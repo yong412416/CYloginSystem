@@ -36,26 +36,22 @@
 @implementation ForgetViewController
 
 - (void)viewDidLoad {
-    [self creatTimer];
-    p = self.side;
+    
     [super viewDidLoad];
     
+    [self creatTimer];
+    p = self.side;
+    
+ 
+    [self.view addSubview:self.timeLabel];
+
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(backMain)];
     
-    NSInteger width = (self.view.bounds.size.width)/4;
-    NSInteger height = self.view.bounds.size.height;
-    self.timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(width*1.25-30, height-50, width+120, 50)];
-    
-    self.timeLabel.backgroundColor = [UIColor whiteColor];
-    self.view.backgroundColor = [UIColor purpleColor];
-    if (!self.tag) {
-        [self.view addSubview:self.timeLabel];        
-    }
+    self.timeLabel.backgroundColor = [UIColor purpleColor];
     
     // Do any additional setup after loading the view.
     [self playGame];
-   
-//    [self gameOver];
+
 }
 
 - (void)backMain{
@@ -67,6 +63,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self.runTimer setFireDate:[NSDate distantPast]];
 }
 
 
@@ -96,16 +93,15 @@
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;
     for (int i = 0; i < p*p; i++) {
         imageButton = [[UIButton alloc]initWithFrame:CGRectMake((0.1*p/(p-1)+0.9)*width*(i%p), ((height*0.8) *(i/p)*(0.1*p/(p-1)+0.9)), width*0.9, height*0.72)];
+        imageButton.layer.cornerRadius = 10;
         if (i == s ) {
-            imageButton.backgroundColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:(0.8+self.clarity*a*0.01)];
+            imageButton.backgroundColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:(0.7+self.clarity*a*0.01)];
             [imageButton addTarget:self action:@selector(playGame) forControlEvents:UIControlEventTouchDown];
         }else{ 
             imageButton.backgroundColor = [ UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
             if (self.tag) {
                 [imageButton addTarget:self action:@selector(gameOver) forControlEvents:UIControlEventTouchDown];
-                if (a>20) {
-                    [self gameOver];
-                }
+                
             }
         }
         [v addSubview:imageButton];
@@ -114,8 +110,8 @@
 }
 
 - (void)creatTimer{
-    [self.runTimer setFireDate:[NSDate distantPast]];
     self.runTimer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    [self.runTimer setFireDate:[NSDate distantPast]];
 //    [self.runTimer setFireDate:[NSDate distantFuture]];
     
 }
@@ -123,12 +119,11 @@
     _s = self.time;
 }
 - (void)timerAction{
-    
         if (++_s>=self.time) {
             _s=0;
-            if (!self.tag) {
+            
                 [self gameOver];
-            }
+            
             
         }
     self.timeLabel.text=[NSString stringWithFormat:@"剩余时间%02zd",self.time-_s];
@@ -137,17 +132,7 @@
 
 - (void)gameOver{
     CYGameOverViewController *gameOver = [[CYGameOverViewController alloc]init];
-    /*
-     @property(nonatomic, assign)NSInteger time;
-     // 边长
-     @property(nonatomic, assign)NSInteger side;
-     //透明度
-     @property(nonatomic, assign)CGFloat clarity;
-     // 判断是否
-     @property(nonatomic, assign)BOOL tag;
-     
-     @property(nonatomic, copy)NSString *gameTitle;
-     */
+
     gameOver.titleLable = self.gameTitle;
     gameOver.score = a-1;
     gameOver.time = self.time;
@@ -158,9 +143,19 @@
     [self.navigationController pushViewController:gameOver animated:NO];
 }
 
+
+
 - (void)viewDidDisappear:(BOOL)animated{
     [self.runTimer invalidate];
 }
 
+- (UILabel *)timeLabel{
+    NSInteger width = (self.view.bounds.size.width)/4;
+    NSInteger height = self.view.bounds.size.height;
+    if (_timeLabel == nil) {
+        _timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(width*1.25-30, height-50, width+120, 50)];
+    }
+    return _timeLabel;
+}
 
 @end

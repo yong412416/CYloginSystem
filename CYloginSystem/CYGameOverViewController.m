@@ -10,6 +10,8 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "ForgetViewController.h"
+#import "CYScoreModel.h"
+#import "CYDatabaseMessage.h"
 
 @interface CYGameOverViewController ()
 
@@ -39,6 +41,45 @@
     
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    CYScoreModel *model = [[CYDatabaseMessage sharedManager] allScore];
+    if ([self.gameTitle isEqualToString:@"经典模式"]) {
+        if (self.score > model.sutraScore) {
+            model.sutraScore = self.score;
+            [[CYDatabaseMessage sharedManager] updateScore:model];
+            self.labelScore.text = [NSString stringWithFormat:@"恭喜, 创造了新的记录找出了%zd个色块",self.score];
+        }else{
+            self.labelScore.text = [NSString stringWithFormat:@"共找出色块个数为%d,  最佳记录为%zd",self.score,model.sutraScore];
+        }
+        
+    }
+    if ([self.gameTitle isEqualToString:@"暴力模式"]) {
+        if (!model.violentScore) {
+            model.violentScore = 0;
+        }
+        if (self.score > model.violentScore) {
+            model.violentScore = self.score;
+            [[CYDatabaseMessage sharedManager] updateScore:model];
+            self.labelScore.text = [NSString stringWithFormat:@"恭喜, 创造了新的记录找出了%d个色块",self.score];
+        }else{
+            self.labelScore.text = [NSString stringWithFormat:@"共找出色块个数为%d,  最佳记录为%zd",self.score,model.violentScore];
+        }
+    }
+    if ([self.gameTitle isEqualToString:@"街机模式"]) {
+
+        if (self.score > model.arcadeScore) {
+            
+            model.arcadeScore = self.score;
+            
+            [[CYDatabaseMessage sharedManager] updateScore:model];
+            self.labelScore.text = [NSString stringWithFormat:@"恭喜, 创造了新的记录找出了%d个色块",self.score];
+        }else{
+            self.labelScore.text = [NSString stringWithFormat:@"共找出色块个数为%d,  最佳记录为%zd",self.score,model.arcadeScore];
+        }
+    }
+}
+
 - (void)againOnce{
     
     AppDelegate *appd = [UIApplication sharedApplication].delegate;
@@ -65,9 +106,7 @@
 
 
 
-- (void)viewDidAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-}
+
 
 - (UILabel *)labelTitle{
     if (_labelTitle == nil) {
@@ -76,7 +115,7 @@
         _labelTitle = [[UILabel alloc]initWithFrame:CGRectMake(0.2*w, 0.1*h, 0.6*w, 0.15*h)];
         _labelTitle.text = self.titleLable;
         _labelTitle.textAlignment = NSTextAlignmentCenter;
-        _labelTitle.font = [UIFont systemFontOfSize:42];
+        _labelTitle.font = [UIFont systemFontOfSize:self.view.bounds.size.width/20];
         _labelTitle.textColor = [UIColor redColor];
     }
     return _labelTitle;
@@ -88,9 +127,11 @@
         CGFloat h = [UIScreen mainScreen].bounds.size.height;
         _labelScore = [[UILabel alloc]initWithFrame:CGRectMake(0.15*w, 0.3*h, 0.7*w, 0.1*h)];
         
-        _labelScore.text = [NSString stringWithFormat:@"共找出图块%zd个",self.score];
+//        _labelScore.text = [NSString stringWithFormat:@"共找出图块%zd个",self.score];
+        
         _labelScore.textAlignment = NSTextAlignmentCenter;
-        _labelScore.font = [UIFont systemFontOfSize:28];
+        _labelScore.font = [UIFont systemFontOfSize:self.view.bounds.size.width/30];
+        _labelScore.numberOfLines =0;
         _labelScore.textColor = [UIColor blackColor];
         
     }

@@ -12,7 +12,7 @@
 
 @property(nonatomic, copy)NSString *titleLable;
 
-@property(nonatomic, assign)NSInteger score;
+@property(nonatomic, assign)int score;
 
 @property(nonatomic, assign)NSInteger time;
 // 边长

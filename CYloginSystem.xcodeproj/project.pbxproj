@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A99431C9FB844026C2BD121 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFD60F63E99C6EFA6904848 /* libPods.a */; };
+		BC1D00981C44C134007514DA /* CYDatabaseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D00971C44C134007514DA /* CYDatabaseMessage.m */; };
+		BC1D009B1C44C253007514DA /* CYScoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D009A1C44C253007514DA /* CYScoreModel.m */; };
 		BCACE5D21C0981560040ACF3 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCACE5D11C0981560040ACF3 /* ForgetViewController.m */; };
 		BCC0526D1C2ACC40004DF76B /* CYGameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC0526C1C2ACC40004DF76B /* CYGameOverViewController.m */; };
 		BCD401C11C087468003883E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD401C01C087468003883E8 /* main.m */; };
@@ -29,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BFD60F63E99C6EFA6904848 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1D00961C44C134007514DA /* CYDatabaseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYDatabaseMessage.h; sourceTree = "<group>"; };
+		BC1D00971C44C134007514DA /* CYDatabaseMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYDatabaseMessage.m; sourceTree = "<group>"; };
+		BC1D00991C44C253007514DA /* CYScoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYScoreModel.h; sourceTree = "<group>"; };
+		BC1D009A1C44C253007514DA /* CYScoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYScoreModel.m; sourceTree = "<group>"; };
 		BCACE5D01C0981560040ACF3 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		BCACE5D11C0981560040ACF3 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		BCC0526B1C2ACC40004DF76B /* CYGameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGameOverViewController.h; sourceTree = "<group>"; };
@@ -46,6 +54,8 @@
 		BCD401D41C087468003883E8 /* CYloginSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYloginSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD401D91C087468003883E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD401DA1C087468003883E8 /* CYloginSystemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYloginSystemTests.m; sourceTree = "<group>"; };
+		D91B4CDA36987354152C72F7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E9BEBFA6C5650BFA6136F123 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A99431C9FB844026C2BD121 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8E8CF399171A1978263C31F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9BEBFA6C5650BFA6136F123 /* Pods.debug.xcconfig */,
+				D91B4CDA36987354152C72F7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BCD401B21C087467003883E8 = {
 			isa = PBXGroup;
 			children = (
 				BCD401BD1C087467003883E8 /* CYloginSystem */,
 				BCD401D71C087468003883E8 /* CYloginSystemTests */,
 				BCD401BC1C087467003883E8 /* Products */,
+				A8E8CF399171A1978263C31F /* Pods */,
+				F391C5040A04F24C46F8DDE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +117,10 @@
 				BCACE5D11C0981560040ACF3 /* ForgetViewController.m */,
 				BCC0526B1C2ACC40004DF76B /* CYGameOverViewController.h */,
 				BCC0526C1C2ACC40004DF76B /* CYGameOverViewController.m */,
+				BC1D00991C44C253007514DA /* CYScoreModel.h */,
+				BC1D009A1C44C253007514DA /* CYScoreModel.m */,
+				BC1D00961C44C134007514DA /* CYDatabaseMessage.h */,
+				BC1D00971C44C134007514DA /* CYDatabaseMessage.m */,
 				BCD401C81C087468003883E8 /* Main.storyboard */,
 				BCD401CB1C087468003883E8 /* Images.xcassets */,
 				BCD401CD1C087468003883E8 /* LaunchScreen.xib */,
@@ -129,6 +155,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F391C5040A04F24C46F8DDE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BFD60F63E99C6EFA6904848 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD401DE1C087468003883E8 /* Build configuration list for PBXNativeTarget "CYloginSystem" */;
 			buildPhases = (
+				677BF62B631DB6C8D0C73AF8 /* Check Pods Manifest.lock */,
 				BCD401B71C087467003883E8 /* Sources */,
 				BCD401B81C087467003883E8 /* Frameworks */,
 				BCD401B91C087467003883E8 /* Resources */,
+				FA6A925BA3EAB9A947DE3B46 /* Embed Pods Frameworks */,
+				BCDE413C7167E3CAAA0BA9EB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,6 +215,7 @@
 				TargetAttributes = {
 					BCD401BA1C087467003883E8 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 246FCL3YV7;
 					};
 					BCD401D31C087468003883E8 = {
 						CreatedOnToolsVersion = 6.4;
@@ -224,6 +262,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		677BF62B631DB6C8D0C73AF8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCDE413C7167E3CAAA0BA9EB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA6A925BA3EAB9A947DE3B46 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCD401B71C087467003883E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -232,6 +318,8 @@
 				BCACE5D21C0981560040ACF3 /* ForgetViewController.m in Sources */,
 				BCD401C71C087468003883E8 /* ViewController.m in Sources */,
 				BCD401C41C087468003883E8 /* AppDelegate.m in Sources */,
+				BC1D00981C44C134007514DA /* CYDatabaseMessage.m in Sources */,
+				BC1D009B1C44C253007514DA /* CYScoreModel.m in Sources */,
 				BCC0526D1C2ACC40004DF76B /* CYGameOverViewController.m in Sources */,
 				BCD401C11C087468003883E8 /* main.m in Sources */,
 			);
@@ -359,21 +447,33 @@
 		};
 		BCD401DF1C087468003883E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9BEBFA6C5650BFA6136F123 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CYloginSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = club.wanderful.CYlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
 		BCD401E01C087468003883E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91B4CDA36987354152C72F7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CYloginSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = club.wanderful.CYlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
+				USE_HEADERMAP = YES;
 			};
 			name = Release;
 		};
