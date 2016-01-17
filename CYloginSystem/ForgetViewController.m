@@ -30,13 +30,13 @@
     难度的选择
     不同的模式()
     本地数据排行
-    
+ 
  */
 
 @implementation ForgetViewController
 
 - (void)viewDidLoad {
-    
+    self.title = self.gameTitle;
     [super viewDidLoad];
     
     [self creatTimer];
@@ -45,9 +45,10 @@
  
     [self.view addSubview:self.timeLabel];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(backMain)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(backMain)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(backMain)];
     
-    self.timeLabel.backgroundColor = [UIColor purpleColor];
+//    self.timeLabel.backgroundColor = [UIColor purpleColor];
     
     // Do any additional setup after loading the view.
     [self playGame];
@@ -59,6 +60,7 @@
     ViewController *vc = [[ViewController alloc]init];
     UINavigationController *nav= [[UINavigationController alloc]initWithRootViewController:vc];
     appd.window.rootViewController = nav;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -71,21 +73,20 @@
 - (void)playGame{
     // 1. 先将原来的v移除
     UIView *view = [self.view viewWithTag:987];
-    [view removeFromSuperview];
+    [view removeFromSuperview]; 
     a++;
     if (a %5 == 0) {
         p ++;
     }
-     CGFloat height=[UIScreen mainScreen].bounds.size.height/p;
-    CGFloat width=(self.view.bounds.size.width)/p;
-    UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, height*p*0.8)];
+
+    CGFloat height=SCREEN_HEIGHT/p*0.9;
+    CGFloat width=SCREEN_WIDTH/p;
+    UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, height*p*0.8)];
 //    v.backgroundColor = [UIColor blackColor];
     v.tag = 987;
     
     self.view.backgroundColor = [UIColor whiteColor];
    
-    
-//    v.backgroundColor = [UIColor whiteColor];
     
     int s = arc4random()%(p*p);
     CGFloat hue = ( arc4random() % 128 / 256.0 )+0.5;
@@ -134,7 +135,7 @@
     CYGameOverViewController *gameOver = [[CYGameOverViewController alloc]init];
 
     gameOver.titleLable = self.gameTitle;
-    gameOver.score = a-1;
+    gameOver.score = (int)(a-1);
     gameOver.time = self.time;
     gameOver.side = self.side;
     gameOver.tag = self.tag;

@@ -1,0 +1,22 @@
+//
+//  CY.pch
+//  CYloginSystem
+//
+//  Created by qianfeng on 16/1/16.
+//  Copyright © 2016年 qianfeng. All rights reserved.
+//
+
+#ifndef CY_pch
+#define CY_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/** 颜色 */
+#define RGB(_r,_g,_b,_a) [UIColor colorWithRed:_r/255.f green:_g/255.f blue:_b/255.f alpha:_a]
+
+/** 屏幕的宽高 */
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#endif /* CY_pch */
